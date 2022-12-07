@@ -14,29 +14,29 @@
                             <div class="card shadow-none p-3 rounded">
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted">Pregunta 1.</h6>
-                    <h5 class="card-title">que dia no es hoy?</h5>
+                    <h5 class="card-title">p1</h5>
 
                     <div class="form-group multiple-choise-question" id="1">
                         <div class="form-check">
                 <input  class="check-input form-check-input question-1 multiple-choise-input" 
                         type="checkbox" 
-                        value="lunes" 
+                        value="1" 
                         id="flexCheckChecked1-1" >
-                <label class="form-check-label" for="flexCheckChecked1-1}">lunes</label>
+                <label class="form-check-label" for="flexCheckChecked1-1}">1</label>
             </div>
             <div class="form-check">
                 <input  class="check-input form-check-input question-1 multiple-choise-input" 
                         type="checkbox" 
-                        value="martes" 
+                        value="2" 
                         id="flexCheckChecked1-2" >
-                <label class="form-check-label" for="flexCheckChecked1-2}">martes</label>
+                <label class="form-check-label" for="flexCheckChecked1-2}">2</label>
             </div>
             <div class="form-check">
                 <input  class="check-input form-check-input question-1 multiple-choise-input" 
                         type="checkbox" 
-                        value="miercoles" 
+                        value="3" 
                         id="flexCheckChecked1-3" >
-                <label class="form-check-label" for="flexCheckChecked1-3}">miercoles</label>
+                <label class="form-check-label" for="flexCheckChecked1-3}">3</label>
             </div>
             
                     </div>
@@ -49,13 +49,13 @@
     <div class="card border-danger" id="bad-response-question-1" style="max-width: 100vh;" hidden>
         <div class="card-body text-danger">
         <h6 class="card-title">Respueta incorrecta</h6>
-        <p class="card-text">hoy es miercoles, revisa tu calendario</p>
+        <p class="card-text">algo</p>
         </div>
     </div>
     <div class="card shadow-none p-3 rounded question" >
                 <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted">Pregunta 2.</h6>
-                <h5 class="card-title">escribe miercoles</h5>
+                <h5 class="card-title">p2</h5>
             
                 <div class="input-group short-response-question" id="2">
                     <div class="input-group-prepend ">
@@ -69,23 +69,23 @@
     <div class="card border-danger" id="bad-response-question-2" style="max-width: 100vh;" hidden>
         <div class="card-body text-danger">
         <h6 class="card-title">Respueta incorrecta</h6>
-        <p class="card-text">revisa un diccionario</p>
+        <p class="card-text">otro ..</p>
         </div>
     </div>
     <div class="card shadow-none p-3 rounded">
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted">Pregunta 3.</h6>
-                    <h5 class="card-title">hoy es miercoles?</h5>
+                    <h5 class="card-title">p3</h5>
                     <div class=" form-group d-flex flex-row true-false-question" id="3">
 
                         <div class="form-check">
-                            <input class="form-check-input question-3 true-false-input" type="radio" name="flexRadiohoyesmiercoles?" id="flexRadiohoyesmiercoles?1" value="true" >
-                            <label class="form-check-label" for="flexRadiohoyesmiercoles?1">True</label>
+                            <input class="form-check-input question-3 true-false-input" type="radio" name="flexRadiop3" id="flexRadiop31" value="true" >
+                            <label class="form-check-label" for="flexRadiop31">True</label>
                         </div>
 
                         <div class="form-check mx-3">
-                            <input class="form-check-input question-3 true-false-input" type="radio" name="flexRadiohoyesmiercoles?" id="flexRadiohoyesmiercoles?2" value="false" >
-                            <label class="form-check-label" for="flexRadiohoyesmiercoles?2">False</label>
+                            <input class="form-check-input question-3 true-false-input" type="radio" name="flexRadiop3" id="flexRadiop32" value="false" >
+                            <label class="form-check-label" for="flexRadiop32">False</label>
                         </div>
 
                     </div>
@@ -94,7 +94,7 @@
     <div class="card border-danger" id="bad-response-question-3" style="max-width: 100vh;" hidden>
         <div class="card-body text-danger">
         <h6 class="card-title">Respueta incorrecta</h6>
-        <p class="card-text">lo es</p>
+        <p class="card-text">otro otro</p>
         </div>
     </div>
     
@@ -111,19 +111,19 @@
     const minimalNoteToAprove=51;
     const questionsResponseExpected=[{ 
                                             number:1,
-                                            correctAnswer:["lunes","martes",],
-                                            points:15,
-                                            failedMessage:"hoy es miercoles, revisa tu calendario"
+                                            correctAnswer:["1","2",],
+                                            points:25,
+                                            failedMessage:"algo"
                                             },{ 
                                             number:2,
-                                            correctAnswer:["miercoles"],
-                                            points:10,
-                                            failedMessage:"revisa un diccionario"
+                                            correctAnswer:["palabra"],
+                                            points:16,
+                                            failedMessage:"otro .."
                                             },{ 
                                             number:3,
                                             correctAnswer:["true"],
-                                            points:10,
-                                            failedMessage:"lo es"
+                                            points:30,
+                                            failedMessage:"otro otro"
                                             },];
                         </script>
                         <script src="../scripts/form-script.js"></script>    

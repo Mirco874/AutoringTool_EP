@@ -98,7 +98,6 @@ const getCheckedInputsValues=(questionInputsArray)=>{
 
 const openBadResponseCard=(number)=>{
   const badResponseCard=document.getElementById("bad-response-question-"+number);
-  console.log("asdsad");
   badResponseCard.hidden=false;
 }
 
