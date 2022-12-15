@@ -18,11 +18,6 @@ export const writeScormFile=async(req,res)=>{
     fs.writeFile(directory, content, (err) => {if (err) throw err;});
 }
 
-export const writeXApiFile=async(req,res)=>{
-    const {type,content}=req.body;
-    console.log("a")
-}
-
 export const buidScormZip=async(scormZipName)=>{
     const scormFolderDirectory="./templates/scorm_course";
     ZipLocal.sync.zip(scormFolderDirectory).compress().save(scormZipName);
@@ -40,5 +35,19 @@ export const generateScormZip=async(req,res)=>{
     await downloadScormZip(res,zipPath);
 }
 
+export const writeXAPIFile=async(req,res)=>{
+    const {type,content}=req.body;
+    let directory="./templates/xAPI_course/index.html"; //directorio de escritura
+        fs.writeFile(directory,content,(err) => 
+        {
+            if (err) {console.error(err);}
+        });
+}
 
-
+export const downloadXAPIZip=async(req,res)=>{
+    const XAPIFolderDirectory="./templates/xAPI_course";
+    const zipName="xapi_course.zip";
+    const zipPath=`./${zipName}`;
+    ZipLocal.sync.zip(XAPIFolderDirectory).compress().save(zipName);
+    res.download(zipPath);
+}

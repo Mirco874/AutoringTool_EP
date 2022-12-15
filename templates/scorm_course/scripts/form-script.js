@@ -104,7 +104,7 @@ const openBadResponseCard=(number)=>{
 const finishQuiz=()=>{
   RegisterTotalPoints();
   const totalPointsRegistered=ScormProcessGetValue("cmi.score.raw"); 
-  if(totalPointsRegistered<51){
+  if(totalPointsRegistered<minimalNoteToAprove){
     ScormProcessSetValue("cmi.success_status","failed"); 
     ScormProcessSetValue("cmi.completion_status","incomplete");
   }

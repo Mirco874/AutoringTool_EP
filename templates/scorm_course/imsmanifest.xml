@@ -7,9 +7,9 @@
 </metadata>
 <organizations>
     <organization identifier="eva_2022">
-        <title>EVA 2022</title>
+        <title>EVA</title>
         <item identifier="item_1" identifierref="resource_1">
-            <title>Cuestionario</title>
+            <title>EVA</title>
             <imsss:sequencing>
             <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
             </imsss:sequencing>

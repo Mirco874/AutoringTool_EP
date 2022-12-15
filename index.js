@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { generateScormZip, writeScormFile, writeXApiFile } from './utils/fileFunctions.js';
+import { downloadXAPIZip, generateScormZip, writeScormFile, writeXAPIFile } from './utils/fileFunctions.js';
 
 const app = express()
 
@@ -22,7 +22,7 @@ app.post("/editor",async(req,res)=>{
 
     if(standar==="xapi"){
         try {
-            await writeXApiFile(req,res);
+            await writeXAPIFile(req,res);
             res.status(201);
             } 
         catch (error){res.status(500).send(error);}
@@ -36,6 +36,14 @@ app.get("/generate-scorm",async(req,res)=>{
             res.status(200);
             } 
         catch (error){res.status(500).send(error);}
+})
+
+app.get("/generate-xapi",async(req,res)=>{
+    try {
+        await downloadXAPIZip(req,res);
+        res.status(200);
+        } 
+    catch (error){res.status(500).send(error);}
 })
 
 
