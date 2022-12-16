@@ -2,10 +2,10 @@
 //const UserData=require("./userData");
 let lrs;
 ///toDo
-const domain="http://EVA12022.com";
-const endpoint="https://cloud.scorm.com/lrs/ESSS8PGA5M/";
-const LRSuserName="ESSS8PGA5M";
-const LRSPassword="iLJq7AazKGWwGYPT1QGjbTrmg2G7pUOstntjd9gd";
+// const domain="http://EVA12022.com";
+// const endpoint="https://cloud.scorm.com/lrs/ESSS8PGA5M/";
+// const LRSuserName="ESSS8PGA5M";
+// const LRSPassword="iLJq7AazKGWwGYPT1QGjbTrmg2G7pUOstntjd9gd";
 let userName="";
 let email="";
 

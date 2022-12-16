@@ -1,3 +1,19 @@
+const evaluationBtn=document.getElementById("evaluation-button");
+const resultsCard=document.getElementById("results-card");
+ 
+const evaluate=(e)=>{
+    e.preventDefault();
+    setPointsPerQuestion();
+    evaluationBtn.hidden=true;
+}
+
+evaluationBtn.addEventListener("click",evaluate,false);    
+
+const showRegisteredScore=(registeredScore)=>{
+  resultsCard.hidden=false;
+  document.getElementById("final-score").innerHTML=`your registered scaled score was: ${registeredScore*100}%`
+}
+
   const getQuestionType = (questionInputsArray) => {
     let response = "";
     questionInputsArray.forEach((input) => {
@@ -101,7 +117,7 @@
 
   const finishQuiz=()=>{
     const scaledPoints= totalScore/maxScore;
-
+    showRegisteredScore(scaledPoints);
     if(totalScore<minimalNoteToAprove){
         registerEndQuizStatement(scaledPoints,false,true);
     }
@@ -127,3 +143,5 @@
   };
   
   
+
+

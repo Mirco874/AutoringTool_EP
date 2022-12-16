@@ -1,3 +1,20 @@
+const evaluationBtn=document.getElementById("evaluation-button");
+const resultsCard=document.getElementById("results-card");
+ 
+const evaluate=(e)=>{
+    e.preventDefault();
+    setPointsPerQuestion();
+    evaluationBtn.hidden=true;
+}
+
+evaluationBtn.addEventListener("click",evaluate,false);    
+
+const showRegisteredScore=(registeredScore)=>{
+  document.getElementById("final-score").innerHTML=`your registered scaled score was: ${registeredScore*100}%`
+  resultsCard.hidden=false;
+}
+
+
 const initializeEvaluation = () => {
   ScormProcessInitialize();
   ScormProcessSetValue("cmi.score.min", minScore);
@@ -7,7 +24,6 @@ const initializeEvaluation = () => {
   //ScormProcessSetValue("cmi.time_limit_action", "exit");
   //attemps
 };
-
 
 const getQuestionType = (questionInputsArray) => {
   let response = "";
@@ -89,7 +105,11 @@ const htmlCollectionToArray = (questionInputs) => {return Array.prototype.slice.
 
 const getCheckedInputs=(questionInputsArray)=>{return questionInputsArray.filter((input) => input.checked === true);}
 
-const RegisterTotalPoints = () => {ScormProcessSetValue("cmi.score.raw", totalScore);};
+const RegisterTotalPoints = () => {
+  const scaledPoints= totalScore/maxScore;
+  ScormProcessSetValue("cmi.score.raw",scaledPoints );
+  ScormProcessSetValue("cmi.score.raw",totalScore );
+};
 
 const getCheckedInputsValues=(questionInputsArray)=>{
     const checkedInputObjects = getCheckedInputs(questionInputsArray);
